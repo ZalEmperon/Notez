@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="student"
+            type="com.rahmat.app.samplecrudkotlin.entity.Student"/>
+    </data>
+<RelativeLayout
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".features.detail.DetailActivity"
+    android:padding="24dp"
+    tools:showIn="@layout/activity_detail">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@mipmap/ic_launcher" />
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_below="@id/imageView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:text="@{student.name}"
+                tools:text="Nama Muh rahmatullah" />
+            <TextView
+                android:id="@+id/textViewNim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_below="@id/textViewName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:text="@{student.nim}"
+                android:fontFamily="@font/sourcebold"
+                tools:text="Nama Muh rahmatullah" />
+            <TextView
+                android:id="@+id/textViewGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_below="@id/textViewNim"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/sourcesemi"
+                android:text="@{student.gender}"
+                tools:text="Nama Muh rahmatullah" />
+            <TextView
+                android:padding="8dp"
+                android:id="@+id/textViewDesk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:layout_below="@id/textViewGender"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:text="@{student.desk}"
+                tools:text="Nama Muh rahmatullah" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
+</layout>

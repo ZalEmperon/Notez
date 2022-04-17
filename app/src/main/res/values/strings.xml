@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Task Note</string>
+    <string name="title_activity_detail">DetailActivity</string>
+</resources>

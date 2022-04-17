@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="student"
+            type="com.rahmat.app.samplecrudkotlin.entity.Student"/>
+    </data>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="20dp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/ic_launcher_background">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:id="@+id/student_icon"
+                android:src="@mipmap/ic_launcher"/>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="75dp"
+                    android:layout_centerVertical="true"
+                    android:background="#FFFFFF"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@id/student_icon"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/student_icon">
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/item_name"
+                    android:textStyle="bold"
+                    android:text="@{student.name}"
+                    tools:text="KK4A"/>
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/item_nim"
+                    android:textSize="18sp"
+                    android:layout_marginTop="4dp"
+                    android:text="@{student.nim}"
+                    tools:text="Coroutines"/>
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/item_gender"
+                    android:layout_marginTop="4dp"
+                    android:text="@{student.gender}"
+                    tools:text="Pelajaran"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+</layout>
